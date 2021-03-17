@@ -1,0 +1,41 @@
+$primaryCyan: hsl(180, 66%, 49%);
+$primaryViolet: hsl(257, 27%, 26%);
+
+$red: hsl(0, 87%, 67%);
+
+$grey: hsl(0, 0%, 75%);
+$greyViolet: hsl(257, 7%, 63%);
+$darkBlue: hsl(255, 11%, 22%);
+$darkViolet: hsl(260, 8%, 14%);
+
+$fontBody: 1.8em;
+
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {    
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    // background-color: red;
+}
+
