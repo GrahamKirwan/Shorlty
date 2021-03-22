@@ -167,6 +167,11 @@ body {
   padding: 1.3rem 3rem !important;
 }
 
+.stats {
+  position: relative;
+  padding-bottom: 10rem;
+}
+
 .stats--heading {
   font-size: 4rem;
   text-align: center;
@@ -233,5 +238,32 @@ body {
   margin-right: 0;
   -webkit-transform: translateY(7rem);
           transform: translateY(7rem);
+}
+
+.stats_green-bar {
+  height: .7rem;
+  width: 90%;
+  background-color: #2acfcf;
+  margin: 0 auto;
+  -webkit-transform: translateY(20rem);
+          transform: translateY(20rem);
+}
+
+.boost {
+  padding: 5rem 0;
+  text-align: center;
+  background: url(/images/bg-boost-desktop.svg), #3b3054;
+  background-size: cover;
+}
+
+.boost_heading {
+  font-size: 4rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.boost a {
+  font-size: 1.8em;
 }
 /*# sourceMappingURL=main.css.map */

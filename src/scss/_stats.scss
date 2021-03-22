@@ -1,5 +1,6 @@
 .stats {
-    
+    position: relative;
+    padding-bottom: 10rem;
 
     &--heading {
         font-size: 4rem;
@@ -65,5 +66,14 @@
                 transform: translateY(7rem);
             }
         }
+    }
+
+    &_green-bar {
+        height: .7rem;
+        width: 90%;
+        background-color: $primaryCyan;
+        margin: 0 auto;
+        // position: absolute;
+        transform: translateY(20rem);
     }
 }
