@@ -33,3 +33,10 @@ function textToClipboard (copied) {
     document.execCommand("copy");
     document.body.removeChild(dummy);
 }
+
+let res = '';
+let data = '';
+
+fetch('https://api.shrtco.de/v2/shorten?url=example.org/very/long/link.html')
+        .then(res => res.json())
+        .then(data => console.log(data.result.full_short_link));
