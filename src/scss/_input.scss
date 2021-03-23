@@ -17,7 +17,7 @@
         border: none;
         outline: none;
         display: flex;
-        padding-left: 3rem;
+        padding-left: 2.5rem;
         font-size: $fontBody;
 
     }
@@ -28,5 +28,60 @@
         text-align: center;
         font-size: 15px;
         padding: 1.3rem 3rem !important;
+    }
+
+    &--error {
+        color: $red;
+        display: none;
+        position: absolute;
+        font-size: 1.3rem;
+        top: 72%;
+    }
+}
+
+.error {
+    border: 2px solid $red !important;
+    color: $red;
+}
+
+.error::placeholder {
+    color: $red;
+    opacity: 1; /* Firefox */
+}
+
+.short-link {
+    display: flex;
+    background-color: #fff;
+    border-radius: .5rem;
+    padding: 2rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    margin-bottom: 2rem;
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    &--domain {
+        font-size: 1.6rem;
+        color: $primaryViolet;
+        font-weight: 500;
+    }
+
+    &--shorted {
+        font-size: 1.6rem;
+        color: $primaryCyan;
+        font-weight: 500;
+        margin-right: 2rem;
+    }
+
+    &--button {
+        border-radius: .5rem;
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+        padding: .8rem 2.5rem !important;
     }
 }
