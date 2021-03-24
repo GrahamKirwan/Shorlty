@@ -2,6 +2,8 @@ const input = document.querySelector('#shortly-input');
 const button = document.querySelector('#shortly-btn');
 const errorMes = document.querySelector('.input-section--error');
 
+const inputSection = document.querySelector('.input-section');
+
 button.addEventListener('click', function(){
     // Form validation
     if(!input.value){
@@ -12,6 +14,7 @@ button.addEventListener('click', function(){
     input.classList.remove('error');
     errorMes.style.display = 'none';
     let domain = input.value;
+    fetchLink(domain);
     input.value = '';
 });
 
@@ -34,9 +37,26 @@ function textToClipboard (copied) {
     document.body.removeChild(dummy);
 }
 
-let res = '';
-let data = '';
 
-fetch('https://api.shrtco.de/v2/shorten?url=example.org/very/long/link.html')
-        .then(res => res.json())
-        .then(data => console.log(data.result.full_short_link));
+const fetchLink = async function(domain) {
+    let data = await fetch(`https://api.shrtco.de/v2/shorten?url=${domain}`);
+    let parsedData = await data.json();
+    let shortlink = parsedData.result.full_short_link;
+
+    // Call a generate HTML function that takes the domain and shortlink as arguments
+    let html = generateHtml(domain, shortlink);
+    console.log(html);
+    inputSection.insertAdjacentHTML('afterend', html);
+}
+
+function generateHtml(domain, shortlink) {
+    return `
+        <div class="short-link">
+            <h4 class="short-link--domain">${domain}</h4>
+            <div>
+                <h4 class="short-link--shorted">${shortlink}</h4>
+                <a class="btn short-link--button" onclick="copyToClipboard(this)">Copy</a>
+            </div>
+        </div>
+    `
+}
