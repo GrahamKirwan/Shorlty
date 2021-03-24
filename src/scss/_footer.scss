@@ -1,0 +1,53 @@
+.footer {
+    background-color: $darkViolet;
+    padding: 8rem;
+
+    .container {
+        display: flex;
+        justify-content: space-between;    
+    }
+
+    &_left {
+
+    }
+
+    &_right {
+        display: flex;
+
+        &--list{
+            display: flex;
+            flex-direction: column;
+            margin-right: 6.5rem;
+
+            h5 {
+                color: #fff;
+                font-size: 1.5rem;
+                padding-bottom: 2rem;
+            }
+
+            ul {
+
+                li {
+                    list-style: none;
+                    padding-bottom: 1.3rem;
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+        &--socials {
+
+            a {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+
+}
