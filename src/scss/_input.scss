@@ -85,3 +85,18 @@
         padding: .8rem 2.5rem !important;
     }
 }
+
+circle {
+    fill: $primaryCyan;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 125;
+    stroke-dashoffset: 500;
+    animation: rotate 5s linear infinite;
+  }
+  
+  @keyframes rotate {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }

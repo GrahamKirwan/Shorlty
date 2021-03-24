@@ -4,6 +4,8 @@ const errorMes = document.querySelector('.input-section--error');
 
 const inputSection = document.querySelector('.input-section');
 
+const svg = 'a<svg height="40" width="40" style="position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);"><circle cx="20" cy="20" r="15" /></svg>'
+
 button.addEventListener('click', function(){
     // Form validation
     if(!input.value){
@@ -14,6 +16,8 @@ button.addEventListener('click', function(){
     input.classList.remove('error');
     errorMes.style.display = 'none';
     let domain = input.value;
+    button.textContent = '';
+    button.insertAdjacentHTML('afterbegin', svg)
     fetchLink(domain);
     input.value = '';
 });
@@ -45,8 +49,8 @@ const fetchLink = async function(domain) {
 
     // Call a generate HTML function that takes the domain and shortlink as arguments
     let html = generateHtml(domain, shortlink);
-    console.log(html);
     inputSection.insertAdjacentHTML('afterend', html);
+    button.textContent = 'Shorten it!';
 }
 
 function generateHtml(domain, shortlink) {

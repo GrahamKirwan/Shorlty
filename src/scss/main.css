@@ -252,6 +252,28 @@ body {
   padding: .8rem 2.5rem !important;
 }
 
+circle {
+  fill: #2acfcf;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-dasharray: 125;
+  stroke-dashoffset: 500;
+  -webkit-animation: rotate 5s linear infinite;
+          animation: rotate 5s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rotate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 .stats {
   position: relative;
   padding-bottom: 10rem;
