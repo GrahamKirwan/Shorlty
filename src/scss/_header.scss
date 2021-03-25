@@ -23,6 +23,10 @@
                     color: $grey;
                     text-decoration: none;
                     margin: 0 1.8rem;
+
+                    &:hover {
+                        color: $darkBlue;
+                    }
                 }
                 
             }
@@ -59,6 +63,8 @@
                 font-size: 6.2rem;
                 line-height: 1.2;
                 color: $darkBlue;
+                // animation: slideInLeft 1.5s; 
+                // animation-delay: 1s;
             }
 
             &--text {

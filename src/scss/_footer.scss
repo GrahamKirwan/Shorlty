@@ -36,6 +36,10 @@
                         text-decoration: none;
                         font-size: 1.5rem;
                         font-weight: 300;
+
+                        &:hover {
+                            color: $primaryCyan;
+                        }
                     }
                 }
             }
@@ -45,6 +49,11 @@
 
             a {
                 margin-left: 2rem;
+
+                &:hover > svg path {
+                    fill: $primaryCyan;
+                }
+
             }
         }
     }

@@ -5,4 +5,8 @@
     border-radius: 10rem;
     text-decoration: none;
     display: inline-block;
+
+    &:hover {
+        background-color: lighten($primaryCyan, $amount: 20);
+    }
 }
