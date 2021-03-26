@@ -53,6 +53,10 @@
         position: absolute;
         font-size: 1.3rem;
         top: 72%;
+
+        @media only screen and (max-width: 660px) {
+            display: none;
+        }
     }
 
     @media only screen and (max-width: 980px) {

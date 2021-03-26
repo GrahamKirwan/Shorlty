@@ -376,6 +376,12 @@ body {
   top: 72%;
 }
 
+@media only screen and (max-width: 660px) {
+  .input-section--error {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 980px) {
   .input-section {
     padding: 3rem;
