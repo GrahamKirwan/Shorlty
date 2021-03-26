@@ -20,6 +20,13 @@
         padding-left: 2.5rem;
         font-size: $fontBody;
 
+        @media only screen and (max-width: 660px) {
+            margin-right: 0;
+            box-sizing: border-box;
+            margin-bottom: 2rem;
+            height: 43.78px;
+        }
+
     }
 
     a {
@@ -28,6 +35,15 @@
         text-align: center;
         font-size: 15px;
         padding: 1.3rem 3rem !important;
+
+        @media only screen and (max-width: 871px) {
+            width: 25%;
+        }
+
+        @media only screen and (max-width: 660px) {
+            width: 100%;
+            box-sizing: border-box;
+        }
     }
 
     &--error {
@@ -36,6 +52,14 @@
         position: absolute;
         font-size: 1.3rem;
         top: 72%;
+    }
+
+    @media only screen and (max-width: 980px) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: 660px) {
+        flex-direction: column;
     }
 }
 
@@ -62,12 +86,24 @@
     div {
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: 660px) {
+            flex-direction: column;
+            width: 100%;
+        }
     }
 
     &--domain {
         font-size: 1.6rem;
         color: $primaryViolet;
         font-weight: 500;
+
+        @media only screen and (max-width: 660px) {
+            width: 100%;
+            box-sizing: border-box;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $primaryViolet;
+        }
     }
 
     &--shorted {
@@ -75,6 +111,11 @@
         color: $primaryCyan;
         font-weight: 500;
         margin-right: 2rem;
+
+        @media only screen and (max-width: 660px) {
+            margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
+        }
     }
 
     &--button {
@@ -83,6 +124,15 @@
         font-size: 14px;
         cursor: pointer;
         padding: .8rem 2.5rem !important;
+
+        @media only screen and (max-width: 660px) {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    @media only screen and (max-width: 660px) {
+        flex-direction: column;
     }
 }
 
