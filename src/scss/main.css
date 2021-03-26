@@ -117,11 +117,9 @@ body {
 
 .header .navigation_mobile {
   opacity: 0;
+  display: none;
   width: 3.3rem;
   height: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -135,6 +133,9 @@ body {
 @media only screen and (max-width: 660px) {
   .header .navigation_mobile {
     opacity: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
