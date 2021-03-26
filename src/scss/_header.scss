@@ -30,6 +30,10 @@
                 }
                 
             }
+
+            @media only screen and (max-width: 660px) {
+                display: none;
+            }
         }
 
         &_left {
@@ -41,12 +45,41 @@
                 padding-right: 3rem;
 
             }
+
+
         }
 
         &_right {
             display: flex;
 
         }
+
+        &_mobile {
+            opacity: 0;
+            width: 3.3rem;
+            height: 3rem;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            cursor: pointer;
+
+            @media only screen and (max-width: 660px) {
+                opacity: 1;
+            }
+
+            &--burg {
+                width: 100%;
+                background-color: $greyViolet;
+                height: 3px;
+            }
+
+
+        }
+
+        @media only screen and (max-width: 660px) {
+            margin-bottom: 0;
+        }
+
     }
 
     .hero {
@@ -82,6 +115,11 @@
 
             a {
                 font-size: $fontBody;
+
+                @media only screen and (max-width: 660px) {
+                    font-size: 2.5rem;
+                    margin-bottom: 3rem;
+                }
             }
 
             @media only screen and (max-width: 660px) {
@@ -90,6 +128,7 @@
                 text-align: center;
                 padding: 0;
                 margin-bottom: 4rem;
+                margin-top: 4rem;
             }
         }
 
@@ -114,4 +153,59 @@
             flex-direction: column;
         }
     }
+}
+
+.purple_bg {
+    height: 0;
+    transition: all .3s;
+    text-align: center;
+    
+    box-sizing: border-box;
+
+    ul {
+        text-decoration: none;
+        list-style: none;
+        display: none;
+
+        li {
+            margin-bottom: 2.5rem;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 1.8rem;
+                font-size: 2.5rem;
+            }
+
+            .btn {
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0;
+            }
+            
+        }
+
+        &:nth-last-child(1) {
+            border-top: 1px solid $grey;
+            padding-top: 2.5rem;
+        }
+    }
+
+
+    @media only screen and (max-width: 660px) {
+        width: 100%;
+        background-color: $primaryViolet;
+        border-radius: 10px;
+        position: absolute;
+    }
+}
+
+.heightjs {
+    height: 350px;
+    transition: all .3s;
+    padding: 5rem;
+}
+
+.displayjs {
+    display: inherit !important;
 }

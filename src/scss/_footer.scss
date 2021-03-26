@@ -4,17 +4,26 @@
 
     .container {
         display: flex;
-        justify-content: space-between;    
+        justify-content: space-between;   
+        
+        @media only screen and (max-width: 660px) {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &_left {
+
+        @media only screen and (max-width: 660px) {
+            margin-bottom: 4rem;
+        }
 
     }
 
     &_right {
         display: flex;
 
-        &--list{
+        &--list {
             display: flex;
             flex-direction: column;
             margin-right: 6.5rem;
@@ -43,6 +52,11 @@
                     }
                 }
             }
+
+            @media only screen and (max-width: 660px) {
+                margin-right: 0;
+                margin-bottom: 4rem;
+            }
         }
 
         &--socials {
@@ -55,6 +69,10 @@
                 }
 
             }
+        }
+
+        @media only screen and (max-width: 660px) {
+            flex-direction: column;
         }
     }
 

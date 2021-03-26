@@ -110,3 +110,28 @@ function init() {
 
 init();
 
+// Mobile nav
+
+const burgerMenu = document.querySelector('.navigation_mobile');
+const purpleBg = document.querySelector('.purple_bg');
+const mobileUl = document.querySelectorAll('.mobile_ul');
+let isClicked = false;
+
+burgerMenu.addEventListener('click', function(){
+    purpleBg.classList.toggle('heightjs');
+    if(!isClicked) {
+        setTimeout(function(){ 
+            for(let i=0; i<mobileUl.length; i++){
+                mobileUl[i].classList.toggle('displayjs');
+            }
+         }, 400);
+         isClicked = true;
+    } else {
+        for(let i=0; i<mobileUl.length; i++){
+            mobileUl[i].classList.toggle('displayjs');
+        }
+        isClicked = false;
+    }
+
+
+})

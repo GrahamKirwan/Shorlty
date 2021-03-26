@@ -25,6 +25,7 @@
             box-sizing: border-box;
             margin-bottom: 2rem;
             height: 43.78px;
+            
         }
 
     }
@@ -60,6 +61,7 @@
 
     @media only screen and (max-width: 660px) {
         flex-direction: column;
+        margin-bottom: 4rem;
     }
 }
 
@@ -90,6 +92,11 @@
         @media only screen and (max-width: 660px) {
             flex-direction: column;
             width: 100%;
+            align-items: flex-start;
+            border-top: 1px solid #efefef;
+            padding: 2rem;
+            box-sizing: border-box;
+            padding-top: 0;
         }
     }
 
@@ -102,7 +109,8 @@
             width: 100%;
             box-sizing: border-box;
             padding-bottom: 1rem;
-            border-bottom: 1px solid $primaryViolet;
+            font-size: 15px;
+            padding: 2rem;
         }
     }
 
@@ -115,6 +123,7 @@
         @media only screen and (max-width: 660px) {
             margin-bottom: 1.5rem;
             margin-top: 1.5rem;
+            font-size: 15px;
         }
     }
 
@@ -128,11 +137,15 @@
         @media only screen and (max-width: 660px) {
             width: 100%;
             box-sizing: border-box;
+            padding: 1rem 2.5rem !important;
+
         }
     }
 
     @media only screen and (max-width: 660px) {
         flex-direction: column;
+        margin-bottom: 4rem;
+        padding: 0;
     }
 }
 
